@@ -6,7 +6,7 @@
       "avatar": "https://i.pinimg.com/236x/08/44/c5/0844c5eb33e92d674e6ad124bac4903a.jpg",
       "email": "nhinhi@gmail.com",
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "avatar": "https://i.pinimg.com/236x/08/44/c5/0844c5eb33e92d674e6ad124bac4903a.jpg",
       "email": "linh.nguyenthimy23@student.passerellesnumeriques.org",
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "avatar": "https://i.pinimg.com/236x/08/44/c5/0844c5eb33e92d674e6ad124bac4903a.jpg",
       "email": "anle25092002@gmail.com",
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     }
   ],
   "posts": [
@@ -32,7 +32,7 @@
       "image":"https://d7umqicpi7263.cloudfront.net/img/product/2422e83a-46d2-4768-ab3b-707002f10a7f.com/9a3a009aab3034c4cf079fdae78845c0",
       "userId": 1,
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     },
     {
       "id": 2,
@@ -40,7 +40,7 @@
       "image":"https://d7umqicpi7263.cloudfront.net/img/product/2422e83a-46d2-4768-ab3b-707002f10a7f.com/9a3a009aab3034c4cf079fdae78845c0",
       "userId": 2,
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     },
     {
       "id": 3,
@@ -48,14 +48,14 @@
       "image":"https://d7umqicpi7263.cloudfront.net/img/product/2422e83a-46d2-4768-ab3b-707002f10a7f.com/9a3a009aab3034c4cf079fdae78845c0",
       "userId": 3,
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     },
     {
       "id": 4,
       "content": "I'm writing this status to give you my feeling now",
       "userId": 1,
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     }
   ],
   "comments": [
@@ -65,7 +65,7 @@
       "userId": 1,
       "content": "That's awesome",
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     },
     {
       "id": 2,
@@ -73,7 +73,7 @@
       "userId": 2,
       "content": "It's great",
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     },
     {
       "id": 3,
@@ -81,7 +81,7 @@
       "userId": 2,
       "content": "You're really beautiful",
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     },
     {
       "id": 4,
@@ -89,7 +89,7 @@
       "userId": 3,
       "content": "Nice",
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     }
   ],
   "shares": [
@@ -98,28 +98,28 @@
       "postId": 1,
       "userId": 1,
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     },
     {
       "id": 2,
       "postId": 1,
       "userId": 2,
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     },
     {
       "id": 3,
       "postId": 3,
       "userId": 2,
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     },
     {
       "id": 4,
       "postId": 4,
       "userId": 3,
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     }
   ],
   "emotions": [
@@ -128,28 +128,28 @@
       "postId": 1,
       "userId": 1,
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     },
     {
       "id": 2,
       "postId": 1,
       "userId": 2,
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     },
     {
       "id": 3,
       "postId": 1,
       "userId": 2,
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     },
     {
       "id": 4,
       "postId": 4,
       "userId": 3,
       "createdAt": "2022-08-06 13:52:44",
-      "createdUpdate": "2022-08-06 13:52:44"
+      "updatedAt": "2022-08-06 13:52:44"
     }
   ]
 }
