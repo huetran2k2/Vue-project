@@ -5,148 +5,151 @@
       "name": "Nguyen Thi Nhi",
       "avatar": "https://i.pinimg.com/236x/08/44/c5/0844c5eb33e92d674e6ad124bac4903a.jpg",
       "email": "nhinhi@gmail.com",
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     },
     {
       "id": 2,
       "name": "Nguyen Thi My Linh",
       "avatar": "https://i.pinimg.com/236x/08/44/c5/0844c5eb33e92d674e6ad124bac4903a.jpg",
       "email": "linh.nguyenthimy23@student.passerellesnumeriques.org",
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     },
     {
       "id": 3,
       "name": "Le Van An",
       "avatar": "https://i.pinimg.com/236x/08/44/c5/0844c5eb33e92d674e6ad124bac4903a.jpg",
       "email": "anle25092002@gmail.com",
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     }
   ],
   "posts": [
     {
       "id": 1,
       "content": "I'm writing this status to give you my feeling now",
-      "user_id": 1,
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "image":"https://d7umqicpi7263.cloudfront.net/img/product/2422e83a-46d2-4768-ab3b-707002f10a7f.com/9a3a009aab3034c4cf079fdae78845c0",
+      "userId": 1,
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     },
     {
       "id": 2,
       "content": "I'm writing this status to give you my feeling now",
-      "user_id": 2,
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "image":"https://d7umqicpi7263.cloudfront.net/img/product/2422e83a-46d2-4768-ab3b-707002f10a7f.com/9a3a009aab3034c4cf079fdae78845c0",
+      "userId": 2,
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     },
     {
       "id": 3,
       "content": "I'm writing this status to give you my feeling now",
-      "user_id": 3,
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "image":"https://d7umqicpi7263.cloudfront.net/img/product/2422e83a-46d2-4768-ab3b-707002f10a7f.com/9a3a009aab3034c4cf079fdae78845c0",
+      "userId": 3,
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     },
     {
       "id": 4,
       "content": "I'm writing this status to give you my feeling now",
-      "user_id": 1,
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "userId": 1,
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     }
   ],
   "comments": [
     {
       "id": 1,
-      "post_id": 1,
-      "user_id": 1,
+      "postId": 1,
+      "userId": 1,
       "content": "That's awesome",
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     },
     {
       "id": 2,
-      "post_id": 1,
-      "user_id": 2,
+      "postId": 1,
+      "userId": 2,
       "content": "It's great",
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     },
     {
       "id": 3,
-      "post_id": 3,
-      "user_id": 2,
+      "postId": 1,
+      "userId": 2,
       "content": "You're really beautiful",
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     },
     {
       "id": 4,
-      "post_id": 4,
-      "user_id": 3,
+      "postId": 4,
+      "userId": 3,
       "content": "Nice",
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     }
   ],
   "shares": [
     {
       "id": 1,
-      "post_id": 1,
-      "user_id": 1,
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "postId": 1,
+      "userId": 1,
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     },
     {
       "id": 2,
-      "post_id": 1,
-      "user_id": 2,
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "postId": 1,
+      "userId": 2,
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     },
     {
       "id": 3,
-      "post_id": 3,
-      "user_id": 2,
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "postId": 3,
+      "userId": 2,
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     },
     {
       "id": 4,
-      "post_id": 4,
-      "user_id": 3,
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "postId": 4,
+      "userId": 3,
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     }
   ],
   "emotions": [
     {
       "id": 1,
-      "post_id": 1,
-      "user_id": 1,
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "postId": 1,
+      "userId": 1,
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     },
     {
       "id": 2,
-      "post_id": 1,
-      "user_id": 2,
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "postId": 1,
+      "userId": 2,
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     },
     {
       "id": 3,
-      "post_id": 3,
-      "user_id": 2,
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "postId": 1,
+      "userId": 2,
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     },
     {
       "id": 4,
-      "post_id": 4,
-      "user_id": 3,
-      "created_at": "2022-08-06 13:52:44",
-      "created_update": "2022-08-06 13:52:44"
+      "postId": 4,
+      "userId": 3,
+      "createdAt": "2022-08-06 13:52:44",
+      "createdUpdate": "2022-08-06 13:52:44"
     }
   ]
 }
