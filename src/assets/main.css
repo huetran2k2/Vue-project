@@ -1,3 +1,6 @@
+:root{
+  --a: calc((464px*100%)/680px)
+}
 * {
   padding: 0%;
   margin: 0%;
@@ -21,7 +24,9 @@ body {
   overflow: hidden;
   background-color: #fff;
   padding: 1rem;
-  width: 50%;
+  max-width: 680px;
+  width: var(--a);
+  min-width: 464;
   border-radius: 9px;
 }
 .user-wrap {
@@ -54,9 +59,9 @@ body {
   margin-top: -23px;
 }
 .description {
-  position: relative;
   padding: 0.7rem;
   margin-left: -12px;
+  white-space: pre-wrap;
 }
 .upload-img {
   position: relative;
@@ -121,3 +126,4 @@ body {
   margin: 0 1rem;
   color: rgb(51, 51, 51);
 }
+
