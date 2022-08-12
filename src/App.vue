@@ -1,14 +1,14 @@
 <template>
-  <Posts></Posts>
+  <PostItem></PostItem>
 </template>
-
 <script>
-import Posts from "@/pages/Posts.vue";
+import PostItem from "@/components/posts/PostItem.vue";
 export default {
   name: "App",
   components: {
-    Posts,
+    PostItem,
   },
 };
 </script>
+
 <style lang="scss" scoped></style>
