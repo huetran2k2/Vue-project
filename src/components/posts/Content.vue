@@ -18,6 +18,7 @@
   </div>
 </template>
 <script>
+
 export default {
   name: "Content",
   data() {
@@ -29,4 +30,45 @@ CSS is cool!`,
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="css" scoped>
+.upload-img {
+  position: relative;
+  width: 100%;
+}
+.count-likes {
+  margin-left: 2%;
+  margin-top: 5px;
+}
+.description {
+  padding: 0.7rem;
+  margin-left: -12px;
+  white-space: pre-wrap;
+}
+.likes-preview {
+  display: flex;
+  align-items: center;
+}
+.like-comment-preview {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+.likes-preview .fa-thumbs-up,
+.fa-heart {
+  position: relative;
+  border-radius: 50px;
+  background-color: rgb(19, 128, 200);
+  color: white;
+  padding: 5%;
+  border: 2px solid white;
+}
+.fa-thumbs-up {
+  z-index: 211;
+}
+.fa-heart {
+  background-color: rgb(227, 40, 40);
+  margin-left: -6px;
+}
+</style>

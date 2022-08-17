@@ -21,4 +21,24 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="css" scoped>
+.likes-comment-share-icons {
+  position: relative;
+  width: 100%;
+  border-top: 1px solid gray;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+  color: rgb(51, 51, 51);
+}
+.likes-comment-share-icons > div {
+  cursor: pointer;
+}
+.likes-comment-share-icons > div:nth-child(1):focus {
+  color: rgb(19, 128, 200);
+}
+.likes-comment-share-icons i {
+  font-size: 15px;
+}
+</style>
