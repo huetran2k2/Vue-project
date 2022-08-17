@@ -1,12 +1,12 @@
 <template>
-  <PostItem></PostItem>
+  <Post></Post>
 </template>
 <script>
-import PostItem from "@/components/posts/PostItem.vue";
+import Post from "@/components/posts/Post.vue";
 export default {
   name: "App",
   components: {
-    PostItem,
+    Post,
   },
 };
 </script>
