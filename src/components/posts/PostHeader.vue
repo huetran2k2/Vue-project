@@ -2,12 +2,12 @@
   <div class="user-wrap">
     <div class="user-infor">
       <div class="user-img">
-        <img src="@/assets/images/profile-pic.png" class="user-pro-pic" alt="" />
+        <img v-bind:src="post.user.avatar" class="user-pro-pic" alt="" />
       </div>
       <div class="user-content">
-        <h2 class="text-title">Tran Thi Hue</h2>
+        <h2 class="text-title">{{post.user.name}}</h2>
         <br />
-        <span>Tue 9 at 10:43 AM.</span>
+        <span>{{post.createdAt}}</span>
       </div>
     </div>
     <div class="post-option-icons">
@@ -19,6 +19,12 @@
 <script>
 export default {
   name: "Posts",
+  props:{
+    post:{
+      type: Object,
+      required: true
+    }
+  }
 };
 </script>
 <style lang="scss" scoped></style>

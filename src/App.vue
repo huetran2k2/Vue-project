@@ -1,14 +1,15 @@
 <template>
-  <PostItem></PostItem>
+  <router-view />
 </template>
 <script>
-import PostItem from "@/components/posts/PostItem.vue";
+import ListPost from "./components/posts/ListPost.vue";
+import CommentDetail from "./components/posts/CommentDetail.vue";
+
 export default {
   name: "App",
   components: {
-    PostItem,
+    ListPost, CommentDetail
   },
 };
 </script>
-
 <style lang="scss" scoped></style>

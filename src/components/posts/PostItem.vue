@@ -2,8 +2,8 @@
   <div class="container">
     <div class="content-post">
       <div class="post-body">
-        <PostHeader></PostHeader>
-        <Content></Content>
+        <PostHeader v-bind:post="post"></PostHeader>
+        <Content v-bind:post="post"></Content>
         <Interactive></Interactive>
       </div>
     </div>
@@ -20,6 +20,18 @@ export default {
     Content,
     Interactive,
   },
+  props: {
+    post: {
+      type: Object,
+      required: true
+    }
+  },
+  watch: {
+    post() {
+      console.log(post)
+    }
+  }
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>
