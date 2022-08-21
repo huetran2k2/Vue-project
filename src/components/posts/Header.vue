@@ -14,7 +14,6 @@
       <font-awesome-icon icon="fa-solid fa-ellipsis" />
     </div>
   </div>
-  <HeaderPost/>
 </template>
 <script>
 export default {
@@ -27,4 +26,37 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="css" scoped>
+.user-wrap {
+  justify-content: space-between;
+  display: flex;
+}
+.user-content {
+  margin-left: 10px;
+}
+.user-infor {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.text-title {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+}
+.user-pro-pic {
+  position: relative;
+  width: 50px;
+  border-radius: 50px;
+}
+.post-option-icons {
+  color: rgb(78, 78, 78);
+  font-size: 22px;
+}
+.post-option-icons > span {
+  position: relative;
+  margin: 0 1rem;
+  color: rgb(51, 51, 51);
+}</style>

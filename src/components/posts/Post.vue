@@ -1,4 +1,9 @@
 <template>
+<button @click="showCreatePost()">Create a post</button>
+<div v-if="isShowCreate">
+    <NewPost></NewPost>
+
+</div>
     <div v-for="post of listPost" :key="post.id">
         <PostItem v-bind:post="post"></PostItem>
     </div>
@@ -6,16 +11,21 @@
 <script>
 import PostItem from "@/components/posts/PostItem.vue";
 import axios from 'axios'
+import NewPost from "./newPost.vue";
+
 export default {
     name: "ListPost",
     data() {
         return {
-            listPost: []
+            listPost: [],
+            isShowCreate: false
         }
     },
     components: {
-        PostItem,
-    },
+    PostItem,
+    NewPost,
+
+},
     created() {
         this.getPost()
     },
@@ -28,10 +38,26 @@ export default {
             } catch (e) {
                 console.error(e);
             }
+        },
+        showCreatePost(){
+            this.isShowCreate =!this.isShowCreate;
         }
     }
 };
 </script>
-
-<style lang="scss" scoped>
+<style lang="css" scoped>
+.content-post {
+  display: flex;
+  justify-content: center;
+}
+.post-body {
+  box-shadow: 2px 2px 12px 0px rgb(233, 232, 232);
+  overflow: hidden;
+  background-color: #fff;
+  padding: 1rem;
+  max-width: 680px;
+  width: var(--a);
+  min-width: 464;
+  border-radius: 9px;
+}
 </style>

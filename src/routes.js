@@ -1,21 +1,14 @@
-import CommentDetail from './components/posts/CommentDetail.vue'
-import ListPost from './components/posts/ListPost.vue'
+import Post from './components/posts/Post.vue'
 
 import {createRouter, createWebHistory}  from 'vue-router'
 
 const routes = [
     {
         path:'/',
-        name:"ListPost",
-        component: ListPost
-    },
-    {
-        path:'/comment-detail',
-        name:"commentDetail",
-        component: CommentDetail
+        name:"Post",
+        component: Post
     }
 ]
-
 const router = createRouter({
     history:createWebHistory(),
     routes

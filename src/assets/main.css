@@ -32,107 +32,10 @@ body {
   justify-content: space-between;
   display: flex;
 }
-.user-content {
-  margin-left: 10px;
-}
-.user-infor {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.text-title {
-  position: relative;
-  display: inline-block;
-  font-size: 18px;
-}
-.user-pro-pic {
-  position: relative;
-  width: 50px;
-  border-radius: 50px;
-}
-.date-time {
-  position: relative;
-  margin-left: 3.3rem;
-  margin-top: -23px;
-}
-.description {
-  padding: 0.7rem;
-  margin-left: -12px;
-  white-space: pre-wrap;
-}
-.upload-img {
-  position: relative;
-  width: 100%;
-}
-.like-comment-preview {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  padding: 0.5rem;
-  justify-content: space-between;
-}
-.likes-preview {
-  display: flex;
-  align-items: center;
-}
-.likes-preview .fa-thumbs-up,
-.fa-heart {
-  position: relative;
-  border-radius: 50px;
-  background-color: rgb(19, 128, 200);
-  color: white;
-  padding: 5%;
-  border: 2px solid white;
-}
-.fa-thumbs-up {
-  z-index: 211;
-}
-.fa-heart {
-  background-color: rgb(227, 40, 40);
-  margin-left: -6px;
-}
-.count-likes {
-  margin-left: 2%;
-  margin-top: 5px;
-}
-.likes-comment-share-icons {
-  position: relative;
-  width: 100%;
-  border-top: 1px solid gray;
-  padding: 1rem 0;
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 15px;
-  color: rgb(51, 51, 51);
-}
-.likes-comment-share-icons > div {
-  cursor: pointer;
-}
-.likes-comment-share-icons > div:nth-child(1):focus {
-  color: rgb(19, 128, 200);
-}
-.likes-comment-share-icons i {
-  font-size: 15px;
-}
-.post-option-icons {
-  color: rgb(78, 78, 78);
-  font-size: 22px;
-}
-.post-option-icons > span {
-  position: relative;
-  margin: 0 1rem;
-  color: rgb(51, 51, 51);
-}
+
 
 /* comment */
-.comment-box, 
-.post-comment .list{
-  background: #fff;
-  border-radius: 6px;
-  box-shadow: 0 2px 2px #0002;
-}
+
 .comment-session{
   width: 650px;
   height: auto;
@@ -168,35 +71,109 @@ body {
 /* comment-box */
 .comment-box{
   display: flex;
-  padding: 10px ;
-  overflow: hidden;
+  text-align: start;
 }
-.comment-box .user{
-  /* display: flex; */
-  width: min-content;
+.comment-box .box-pic{
+margin-right: 0.7rem;
+position: relative;
 }
+.box-pic::after{
+  display: block;
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  bottom: 0.3rem;
+  left: 2.3rem;
+  border-radius: 50%;
+  border: 0.3rem solid white;
+}
+.box-pic:hover{
+  cursor: pointer;
+}
+.profile-pic{
+  width: 2.2rem;
+  height:2.2rem;
+  border-radius: 50%;
+}
+.comment-text{
+  display: flex;
+  max-width: 600px;
+  align-items: center;
+  flex:1;
+}
+
+.cmt-input{
+  width: 100%;
+  border:none;
+  padding: 0.7rem;
+  font-size: 0.9rem;
+  color: rgba(5,5,5,0.8);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  outline:none;
+  flex:1;
+  background-color: #eee;
+}
+.cmt-input::placeholder{
+  opacity: 0.8;
+
+}
+.cmt-input::focus::-webkit-input-placeholder{
+  opacity: 0.6;
+
+}
+
+.comment-friend{
+  display: flex;
+  text-align: start;
+  font-size: 0.8rem;
+}
+.friend-comment-pic{
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  margin-right: 0.7rem;
+  cursor: pointer;
+  margin-top: 0.1rem;
+
+}
+.friend-comment-pic:hover{
+  filter:brightness(0.95);
+
+}
+.friend-comment-comment{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-right: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  background: rgb(240, 240, 240);
+  border-radius: 1rem;
+}
+.comment-author{
+  align-self: flex-start;
+  font-size: 0.8rem;
+
+}
+.comment-author:hover{
+  text-decoration: underline;
+}
+.comment-author{
+  font-weight: 550;
+  text-decoration: none;
+  color: black;
+  font-size: 0.8rem;
+
+}
+
 .comment-box .image img{
   width: 24px;
   height: 24px;
   margin-right: 10px;
   border-radius: 50%;
 }
-.comment-box input{
-  background: #eee;
-  width: -webkit-fill-available;
-  /* height: 152px; */
-  margin: 10px 0;
-  padding: 8px 12px;
-  resize: inherit;
-  border-radius: 30px;
-  box-shadow: 0 0 0 0.5px #0003;
-  justify-content: center;
 
-}
-.comment-box input:focus-visible{
-  box-shadow: inset 0 0 0 1px #009cff;
-  outline: none;
-}
+
 .comment-box .comment-submit{
   float: right;
   padding: 6px 10px;
