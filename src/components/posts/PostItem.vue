@@ -1,13 +1,8 @@
 <template>
-  <div class="container">
-    <div class="content-post">
-      <div class="post-body">
-        <Header v-bind:post="post"></Header>
-        <Content v-bind:post="post"></Content>
-        <Interactive  v-bind:post="post"></Interactive>
-        <List v-if="isShowCmt"></List>
-      </div>
-    </div>
+  <div class="status-field-container write-post-container">
+    <Header v-bind:id="id" v-bind:post="post" @update-posts="updatePosts"></Header>
+    <Content v-bind:post="post"></Content>
+    <Interactive v-bind:post="post"></Interactive>
   </div>
 </template>
 <script>
@@ -23,19 +18,21 @@ export default {
     Content,
     Interactive,
     List,
-},
+  },
+
+  methods: {
+    updatePosts(id) {
+      this.$emit('update-posts', id)
+      console.log("data",id);
+    },
+  },
+
   props: {
     post: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
-  watch: {
-    post() {
-      console.log(post)
-    }
-  }
 };
 </script>
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

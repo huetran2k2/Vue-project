@@ -1,11 +1,8 @@
 <template>
-  <div class="description">
-    <div>{{ post.title }}</div>
-  </div>
-  <div>
+  <div class="status-field">
+    <p>{{ post.content }}</p>
     <img v-bind:src="post.image" class="upload-img" alt="" />
-  </div>
- 
+ </div>
 </template>
 <script>
 // import CommentDetail from "@/components/posts/CommentDetail.vue";

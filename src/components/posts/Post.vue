@@ -1,63 +1,55 @@
 <template>
-<button @click="showCreatePost()">Create a post</button>
-<div v-if="isShowCreate">
-    <NewPost></NewPost>
-
-</div>
+    <FormAdd @update-list-post="updateListPosts"></FormAdd>
     <div v-for="post of listPost" :key="post.id">
-        <PostItem v-bind:post="post"></PostItem>
+        <PostItem v-bind:post="post" v-bind:id="id" @update-posts="updatePosts"></PostItem>
     </div>
 </template>
 <script>
 import PostItem from "@/components/posts/PostItem.vue";
 import axios from 'axios'
-import NewPost from "./newPost.vue";
+import FormAdd from "./addPost/FormAdd.vue";
 
 export default {
     name: "ListPost",
     data() {
         return {
             listPost: [],
-            isShowCreate: false
         }
     },
     components: {
-    PostItem,
-    NewPost,
-
-},
+        PostItem,
+        FormAdd
+    },
     created() {
         this.getPost()
     },
+   
     methods: {
         async getPost() {
             try {
                 const res = await axios.get(`http://localhost:3000/posts?_expand=user&_embed=comments&_embed=emotions&_embed=shares`);
-                this.listPost = res.data;
-                console.log(res.data);
+                setTimeout(() => {
+                    this.listPost = res.data;
+                }, 1)
+
             } catch (e) {
                 console.error(e);
             }
         },
-        showCreatePost(){
-            this.isShowCreate =!this.isShowCreate;
-        }
+        updateListPosts(e) {
+            console.log("update list post", e);
+            this.listPost.push(e);
+        },
+  
+    updatePosts(id) {
+        this.listPost = this.listPost.filter(listPost => listPost.id !== id)
+        alert("Are you sure????")
+        console.log(this.listPost);
+
+    },
+
     }
 };
 </script>
 <style lang="css" scoped>
-.content-post {
-  display: flex;
-  justify-content: center;
-}
-.post-body {
-  box-shadow: 2px 2px 12px 0px rgb(233, 232, 232);
-  overflow: hidden;
-  background-color: #fff;
-  padding: 1rem;
-  max-width: 680px;
-  width: var(--a);
-  min-width: 464;
-  border-radius: 9px;
-}
 </style>

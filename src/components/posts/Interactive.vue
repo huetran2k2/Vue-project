@@ -24,17 +24,17 @@
     </div>
     <div class="share">
       <font-awesome-icon icon="fa-solid fa-share" />&nbsp;
-      <span>share</span>
+      <span >share</span>
     </div>
   </div>
     <div v-if="isShowCmt">
-      <List v-bind:comments="post.comments"></List>
+      <List v-bind:comments="post.comments" v-bind:post="post"  ></List>
   </div>
+
 </template>
 
 <script>
 import List from "@/components/comments/List.vue";
-
 export default {
   name: "Interactive",
   data() {
@@ -97,11 +97,11 @@ export default {
   padding: 5%;
   border: 2px solid white;
 }
-.fa-thumbs-up {
-  z-index: 211;
-}
 .fa-heart {
   background-color: rgb(227, 40, 40);
   margin-left: -6px;
+}
+.comment-share-preview{
+  cursor: pointer;
 }
 </style>
