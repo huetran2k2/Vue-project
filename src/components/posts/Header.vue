@@ -52,11 +52,8 @@ export default {
     async deletePost(id) {
       await axios
         .delete(`http://localhost:3000/posts/${id}`)
-
         .then((data) => {
-          // like this
           this.$emit("update-posts", id);
-          console.log("data", res.data);
         })
         .catch((err) => console.log(err));
     },
@@ -64,9 +61,9 @@ export default {
 };
 </script>
 <style lang="css" scoped>
-.dropdown-toggle {
-  border: none;
-  outline: none;
-  background: white;
+
+.dropdown-toggle::after {
+    display: contents;
+    margin-left: 0px;
 }
 </style>

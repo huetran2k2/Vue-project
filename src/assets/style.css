@@ -566,4 +566,13 @@ div#dark-button.dark-mode-on {
 
 /* --------------profile-page-------------- */
 
+.dropdown-toggle {
+    border: none;
+    outline: none;
+    background: white;
+  }
 
+.dropdown-toggle::after {
+    display: contents;
+    margin-left: 0px;
+}

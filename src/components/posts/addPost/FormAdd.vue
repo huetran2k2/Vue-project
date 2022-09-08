@@ -2,30 +2,55 @@
   <div class="write-post-container">
     <div class="user-profile">
       <!-- <img v-bind:src="this.auth.user.avatar" alt=""> -->
-      <router-link to="/profile"> <img v-bind:src="this.auth.user.avatar" alt="">
+      <router-link to="/profile">
+        <img v-bind:src="this.auth.user.avatar" alt="" />
       </router-link>
       <div>
-        <p> {{ this.auth.user.lastName  }} {{  this.auth.user.firstName  }}</p>
+        <p>{{ this.auth.user.lastName }} {{ this.auth.user.firstName }}</p>
         <small>Public <i class="fas fa-caret-down"></i></small>
       </div>
     </div>
     <div class="post-upload-textarea">
-      <textarea name="" placeholder="What's on your mind?" id="" cols="30" rows="3"></textarea>
+      <textarea
+        name=""
+        placeholder="What's on your mind?"
+        id=""
+        cols="30"
+        rows="3"
+      ></textarea>
       <div class="add-post-links">
-        <a href="#"><img src="images/live-video.png" alt="">Live Video</a>
-        <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><a href="#"><img
-              src="images/photo.png" alt="" data-bs-toggle="modal"
-              data-bs-target="#exampleModal">Photo/Video</a></button>
-        <a href="#"><img src="images/feeling.png" alt="">Feeling Activity</a>
+        <a href="#"><img src="images/live-video.png" alt="" />Live Video</a>
+        <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <a href="#"
+            ><img
+              src="images/photo.png"
+              alt=""
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            />Photo/Video</a
+          >
+        </button>
+        <a href="#"><img src="images/feeling.png" alt="" />Feeling Activity</a>
       </div>
     </div>
   </div>
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
         </div>
         <div class="modal-body">
           <form>
@@ -45,7 +70,10 @@
                         </div>
                       </div>
                     </div>
-                    <textarea placeholder="What's on your mind?" v-model="form.content"></textarea>
+                    <textarea
+                      placeholder="What's on your mind?"
+                      v-model="form.content"
+                    ></textarea>
                     <div class="theme-emoji">
                       <img src="@/assets/images/icons/theme.svg" alt="theme" />
                       <img src="@/assets/images/icons/smile.svg" alt="smile" />
@@ -54,12 +82,23 @@
                       <p>Add to Your Post</p>
                       <ul class="list">
                         <li>
-                          <input type="file" name="image" value="" @change="onFileChange" required class="button-add">
+                          <input
+                            type="file"
+                            name="image"
+                            value=""
+                            @change="onFileChange"
+                            required
+                            class="button-add"
+                          />
                         </li>
                         <li><img src="@/assets/images/icons/tag.svg" alt="gallery" /></li>
-                        <li><img src="@/assets/images/icons/emoji.svg" alt="gallery" /></li>
+                        <li>
+                          <img src="@/assets/images/icons/emoji.svg" alt="gallery" />
+                        </li>
                         <li><img src="@/assets/images/icons/mic.svg" alt="gallery" /></li>
-                        <li><img src="@/assets/images/icons/more.svg" alt="gallery" /></li>
+                        <li>
+                          <img src="@/assets/images/icons/more.svg" alt="gallery" />
+                        </li>
                       </ul>
                     </div>
                   </form>
@@ -72,16 +111,25 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" @click="addPost()">Post</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-dismiss="modal"
+            @click="addPost()"
+          >
+            Post
+          </button>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
-import Audience from './Audience.vue';
-import axios from 'axios';
+import Audience from "./Audience.vue";
+import axios from "axios";
 export default {
   data() {
     return {
@@ -95,14 +143,13 @@ export default {
         userId: "",
         createdAt: "",
         updatedAt: "",
-
       },
       url: "/profile",
       listPosts: [],
-    }
+    };
   },
   components: {
-    Audience
+    Audience,
   },
   methods: {
     showAudience() {
@@ -118,17 +165,18 @@ export default {
       };
     },
     async addPost() {
-      let date = new Date()
-      this.form.createdAt = date.toDateString('en-US')
-      this.form.updatedAt = date.toDateString('en-US')
-      this.form.userId = this.auth.user.id
+      let date = new Date();
+      this.form.createdAt = date.toDateString("en-US");
+      this.form.updatedAt = date.toDateString("en-US");
+      this.form.userId = this.auth.user.id;
       const res = await axios.post("http://localhost:3000/posts", this.form);
-      const post = await axios.get(`http://localhost:3000/posts/${res.data.id}?_expand=user&_embed=comments&_embed=emotions&_embed=shares`);
-      this.$emit('update-list-post', post.data)
-
-    }
+      const post = await axios.get(
+        `http://localhost:3000/posts/${res.data.id}?_expand=user&_embed=comments&_embed=emotions&_embed=shares`
+      );
+      this.$emit("update-list-post", post.data);
+    },
   },
-}
+};
 </script>
 
 <style lang="css" scoped>
@@ -152,7 +200,6 @@ input.button-add {
 .form-add {
   display: flex;
   justify-content: center;
-
 }
 
 .content-post-add {

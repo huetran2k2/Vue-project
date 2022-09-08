@@ -9,7 +9,7 @@
 import Header from "@/components/posts/Header.vue";
 import Interactive from "@/components/posts/Interactive.vue";
 import Content from "@/components/posts/Content.vue";
-import List from "../comments/list.vue";
+
 
 export default {
   name: "PostItem",
@@ -17,7 +17,6 @@ export default {
     Header,
     Content,
     Interactive,
-    List,
   },
 
   methods: {

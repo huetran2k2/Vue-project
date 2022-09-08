@@ -4,10 +4,16 @@
       <div class="box-pic">
         <img src="@/assets/images/profile-pic.png" alt="" class="profile-pic" />
       </div>
-      <h1>{{  id  }}</h1>
+      <h1>{{ id }}</h1>
       <div class="comment-text">
-        <input @keyup.enter="addComment" type="text" ref="comment" placeholder="Write a comment..." class="cmt-input"
-          v-model="form.content" />
+        <input
+          @keyup.enter="addComment"
+          type="text"
+          ref="comment"
+          placeholder="Write a comment..."
+          class="cmt-input"
+          v-model="form.content"
+        />
       </div>
     </div>
     <br />
@@ -35,10 +41,12 @@ export default {
         postId: null,
       },
       listComments: [],
+
+      newComments: this.comments,
     };
   },
   mounted() {
-    this.setFocus()
+    this.setFocus();
   },
 
   props: {
@@ -48,7 +56,7 @@ export default {
     },
     post: {
       type: Object,
-      required: true
+      required: true,
     },
   },
   methods: {
@@ -57,11 +65,11 @@ export default {
         let date = new Date();
         this.form.createdAt = date.toDateString("en-US");
         this.form.updatedAt = date.toDateString("en-US");
-        this.form.userId = this.auth.user.id
-        this.form.postId = this.post.id
+        this.form.userId = this.auth.user.id;
+        this.form.postId = this.post.id;
         const res = await axios.post("http://localhost:3000/comments", this.form);
-        this.form.content = ""
-        this.comments.push(res.data)
+        this.form.content = "";
+        this.comments.push(res.data);
       }
     },
     setFocus: function () {
@@ -69,16 +77,18 @@ export default {
       console.log("hueueueueuuuu");
     },
     checkValidation() {
-      if (
-        this.form.content
-      ) {
-        return true
+      if (this.form.content) {
+        return true;
       }
-      return false
-    }
-
+      return false;
+    },
+    // updateComments(id) {
+    //   console.log(id);
+    //     console.log("comment",this.newComments)
+    //     this.newComments = this.newComments.filter(comments => comments.id !== id)
+    //     this.$parent.$parent.$parent.$emit("update-comments", this.newComments);
+    // },
   },
-
 };
 </script>
 <style lang="css" scoped>
@@ -126,8 +136,7 @@ export default {
   padding: 0.7rem;
   font-size: 0.9rem;
   color: rgba(5, 5, 5, 0.8);
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
+  border-radius: 2rem;
   outline: none;
   flex: 1;
   background-color: #eee;
@@ -135,12 +144,10 @@ export default {
 
 .cmt-input::placeholder {
   opacity: 0.8;
-
 }
 
 .cmt-input::focus::-webkit-input-placeholder {
   opacity: 0.6;
-
 }
 
 .comment-friend {
@@ -156,12 +163,10 @@ export default {
   margin-right: 0.7rem;
   cursor: pointer;
   margin-top: 0.1rem;
-
 }
 
 .friend-comment-pic:hover {
   filter: brightness(0.95);
-
 }
 
 .friend-comment-comment {
@@ -177,7 +182,6 @@ export default {
 .comment-author {
   align-self: flex-start;
   font-size: 0.8rem;
-
 }
 
 .comment-author:hover {
@@ -189,7 +193,6 @@ export default {
   text-decoration: none;
   color: black;
   font-size: 0.8rem;
-
 }
 
 .comment-box .image img {
@@ -198,7 +201,6 @@ export default {
   margin-right: 10px;
   border-radius: 50%;
 }
-
 
 .comment-box .comment-submit {
   float: right;
