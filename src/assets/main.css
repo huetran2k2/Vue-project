@@ -1,19 +1,518 @@
-:root{
+:root {
   --a: calc((464px*100%)/680px)
 }
+
 * {
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
 }
+
 .container {
   position: relative;
-  height: 100vh;
   background-color: rgb(240, 240, 240);
+  display: flex;
+  justify-content: center;
+}
+
+.post-body {
+  box-shadow: 2px 2px 12px 0px rgb(233, 232, 232);
+  overflow: hidden;
+  background-color: #fff;
+  padding: 1rem;
+  max-width: 680px;
+  width: var(--a);
+  min-width: 464;
+  border-radius: 9px;
+
+}
+
+.user-wrap {
+  justify-content: space-between;
+  display: flex;
+}
+
+/* comment */
+
+.comment-session {
+  width: 650px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.post-comment .list {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.post-comment .list .user {
+  display: flex;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.post-comment .list .user img {
+  height: 38px;
+  width: 38px;
+  margin-right: 10px;
+  border-radius: 50px;
+}
+
+.comment-session .name {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.post-comment .list .day {
+  font-size: 12px;
+
+}
+
+.post-comment .comment-post {
+  padding: 0 0 15px 58px;
+}
+
+/* comment-box */
+.comment-box {
+  display: flex;
+  text-align: start;
+}
+
+.comment-box .box-pic {
+  margin-right: 0.7rem;
+  position: relative;
+}
+
+.box-pic::after {
+  display: block;
+  position: absolute;
+  width: 0.7rem;
+  height: 0.7rem;
+  bottom: 0.3rem;
+  left: 2.3rem;
+  border-radius: 50%;
+  border: 0.3rem solid white;
+}
+
+.box-pic:hover {
+  cursor: pointer;
+}
+
+.profile-pic {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+}
+
+.comment-text {
+  display: flex;
+  max-width: 600px;
+  align-items: center;
+  flex: 1;
+}
+
+.cmt-input {
+  width: 100%;
+  border: none;
+  padding: 0.7rem;
+  font-size: 0.9rem;
+  color: rgba(5, 5, 5, 0.8);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  outline: none;
+  flex: 1;
+  background-color: #eee;
+}
+
+.cmt-input::placeholder {
+  opacity: 0.8;
+
+}
+
+.cmt-input::focus::-webkit-input-placeholder {
+  opacity: 0.6;
+
+}
+
+.comment-friend {
+  display: flex;
+  text-align: start;
+  font-size: 0.8rem;
+}
+
+.friend-comment-pic {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  margin-right: 0.7rem;
+  cursor: pointer;
+  margin-top: 0.1rem;
+
+}
+
+.friend-comment-pic:hover {
+  filter: brightness(0.95);
+
+}
+
+.friend-comment-comment {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-right: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  background: rgb(240, 240, 240);
+  border-radius: 1rem;
+}
+
+.comment-author {
+  align-self: flex-start;
+  font-size: 0.8rem;
+
+}
+
+.comment-author:hover {
+  text-decoration: underline;
+}
+
+.comment-author {
+  font-weight: 550;
+  text-decoration: none;
+  color: black;
+  font-size: 0.8rem;
+
+}
+
+.comment-box .image img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  border-radius: 50%;
 }
 
 
+.comment-box .comment-submit {
+  float: right;
+  padding: 6px 10px;
+  border: none;
+  background: #009cff;
+  color: #eee;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.comment-box .comment-submit:hover {
+  background: #0076bf;
+}
+
+@media screen and (max-width:660px) {
+  .comment-session {
+    width: 100%;
+  }
+}
+
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"); */
+
+.form-add {
+  display: flex;
+  justify-content: center;
+
+}
+
+.content-post-add {
+  overflow-y: auto;
+  max-height: 90vh;
+  background-color: #fff;
+  padding: 1rem;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 9px;
+
+}
+
+.container img {
+  cursor: pointer;
+}
+
+.container .post {
+  transition: margin-left 0.18s ease;
+}
+
+.post header {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 17px 0;
+  text-align: center;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.post form {
+  margin: 20px 25px;
+}
+
+.post form .content,
+.audience .list li .column {
+  display: flex;
+  align-items: center;
+}
+
+.post form .content img {
+  cursor: default;
+  max-width: 52px;
+}
+
+.post form .content .details {
+  margin: -3px 0 0 12px;
+}
+
+form .content .details p {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.content .details .privacy {
+  display: flex;
+  height: 25px;
+  cursor: pointer;
+  padding: 0 10px;
+  font-size: 11px;
+  margin-top: 3px;
+  border-radius: 5px;
+  align-items: center;
+  max-width: 98px;
+  background: #e4e6eb;
+  justify-content: space-between;
+}
+
+.details .privacy span {
+  font-size: 13px;
+  margin-top: 1px;
+  font-weight: 500;
+}
+
+.details .privacy i:last-child {
+  font-size: 13px;
+  margin-left: 1px;
+}
+
+form :where(textarea, button) {
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+form textarea {
+  resize: none;
+  font-size: 18px;
+  margin-top: 30px;
+  min-height: 100px;
+}
+
+form textarea::placeholder {
+  color: #858585;
+}
+
+form textarea:focus::placeholder {
+  color: #b3b3b3;
+}
+
+form :where(.theme-emoji, .options) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.theme-emoji img:last-child {
+  max-width: 24px;
+}
+
+form .options {
+  height: 57px;
+  margin: 15px 0;
+  padding: 0 15px;
+  border-radius: 7px;
+  border: 1px solid #b9b9b9;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+form .options :where(.list, li),
+.audience :where(.arrow-back, .icon, li .radio) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form .options p {
+  color: #595959;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: default;
+}
+
+form .options .list {
+  list-style: none;
+}
+
+.options .list li {
+  height: 42px;
+  width: 42px;
+  margin: 0 -1px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.options .list li:hover {
+  background: #f0f1f4;
+}
+
+.options .list li img {
+  width: 23px;
+}
+
+form button {
+  height: 53px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: #bcc0c4;
+  cursor: no-drop;
+  border-radius: 7px;
+  background: #e2e5e9;
+  transition: all 0.3s ease;
+}
+
+form textarea:valid~button {
+  color: #fff;
+  cursor: pointer;
+  background: #4599ff;
+}
+
+form textarea:valid~button:hover {
+  background: #1a81ff;
+}
+
+.container .audience {
+  opacity: 0;
+  transition: opacity 0.12s ease;
+}
+
+.container.active .audience {
+  opacity: 1;
+}
+
+.audience header {
+  padding: 17px 0;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.audience header .arrow-back {
+  position: absolute;
+  left: 25px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #747474;
+  border-radius: 50%;
+  background: #e4e6eb;
+}
+
+.audience header p {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.audience .content {
+  margin: 20px 25px 0;
+}
+
+.audience .content p {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.audience .content span {
+  font-size: 14px;
+  color: #65676b;
+}
+
+.audience .list {
+  margin: 15px 16px 20px;
+  list-style: none;
+}
+
+.audience .list li {
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 5px;
+  padding: 12px 10px;
+  border-radius: 7px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list li.active,
+.audience .list li.active:hover {
+  background: #e5f1ff;
+}
+
+/* .audience .list li:hover {
+  background: #f0f1f4;
+} */
+
+.audience .list li .column .icon {
+  height: 50px;
+  width: 50px;
+  color: #333;
+  font-size: 23px;
+  border-radius: 50%;
+  background: #e4e6eb;
+}
+
+.audience .list li.active .column .icon {
+  background: #cce4ff;
+}
+
+.audience .list li .column .details {
+  margin-left: 15px;
+}
+
+.list li .column .details p {
+  font-weight: 500;
+}
+
+.list li .column .details span {
+  font-size: 14px;
+  color: #65676b;
+}
+
+.list li .radio {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid #707070;
+}
+
+.list li.active .radio {
+  border: 2px solid #4599ff;
+}
+
+.list li .radio::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: inherit;
+}
+
+.list li.active .radio::before {
+  background: #4599ff;
+}

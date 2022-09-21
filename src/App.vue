@@ -1,14 +1,14 @@
 <template>
-  <Post></Post>
+   <router-view />
 </template>
 <script>
-import Post from "@/components/posts/Post.vue";
+import Layout from './components/Layout.vue';
+
 export default {
   name: "App",
   components: {
-    Post,
+    Layout
   },
 };
 </script>
-
 <style lang="scss" scoped></style>
