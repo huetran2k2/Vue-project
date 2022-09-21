@@ -45,12 +45,16 @@ nav.navbar {
 img.logo {
     width: 160px;
     margin-right: 45px;
+    margin-top: 0.4rem;
 }
 
 .nav-left,
 .nav-right {
     display: flex;
     align-items: center;
+}
+.navlogo{
+    margin-bottom: 0rem;
 }
 
 .nav-left ul li {
@@ -323,7 +327,7 @@ img.advertisement-image {
 .story.story1 img {
     top: unset;
     left: 50%;
-    bottom: 40px;
+    bottom: 50px;
     transform: translateX(-50%);
     border: 0;
     width: 35px;

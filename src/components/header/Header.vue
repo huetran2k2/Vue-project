@@ -22,11 +22,8 @@
                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                 </ul>
             </div>
-
         </div>
-
     </nav>
-
 </template>
 
 <script>

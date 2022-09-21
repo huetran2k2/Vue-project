@@ -4,8 +4,8 @@
       <div class="column">
         <div class="icon"><i class="fas fa-globe-asia"></i></div>
         <div class="details">
-          <p>{{  ob.range  }}</p>
-          <span>{{  ob.description  }}</span>
+          <p>{{ ob.range }}</p>
+          <span>{{ ob.description }}</span>
         </div>
       </div>
       <div class="ul">
@@ -18,29 +18,28 @@
 <script>
 export default {
   data() {
-    return {
-    }
+    return {};
   },
   computed: {
     customClass: function () {
-      return this.rangeValue === this.ob.range ? 'dark-theme' : 'light-theme'
-    }
+      return this.rangeValue === this.ob.range ? "dark-theme" : "light-theme";
+    },
   },
   watch: {
     rangeValue() {
-      this.$emit('update-range-value', this.rangeValue)
-    }
+      this.$emit("update-range-value", this.rangeValue);
+    },
   },
   props: {
     ob: {
       type: Object,
-      required: true
+      required: true,
     },
     rangeValue: {
-      type: String
-    }
-  }
-}
+      type: String,
+    },
+  },
+};
 </script>
 
 <style lang="css" scoped>
@@ -48,11 +47,11 @@ export default {
   display: flex;
   align-items: center;
 }
-.list{
+.list {
   padding: 0.3rem 2rem;
   margin-top: 1rem;
 }
-.audience{
+.audience {
   display: flex;
   justify-content: space-between;
 }

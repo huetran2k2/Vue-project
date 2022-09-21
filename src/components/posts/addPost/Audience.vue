@@ -6,11 +6,16 @@
     </header>
     <div class="content">
       <p>Who can see your post?</p>
-      <span>Your post will show up in News Feed, on your profile and in search
-        results.</span>
+      <span
+        >Your post will show up in News Feed, on your profile and in search results.</span
+      >
     </div>
     <div v-for="ob in Objects" :key="ob.id">
-      <Object v-bind:ob="ob" v-bind:rangeValue="rangeValue" @update-range-value="updateRangeValue"></Object>
+      <Object
+        v-bind:ob="ob"
+        v-bind:rangeValue="rangeValue"
+        @update-range-value="updateRangeValue"
+      ></Object>
     </div>
   </section>
 </template>
@@ -23,31 +28,31 @@ export default {
       rangeValue: "Public",
       Objects: [
         {
-          "id": 1,
-          "range": "Public",
-          "description": "Anyone on or off Facebook"
+          id: 1,
+          range: "Public",
+          description: "Anyone on or off Facebook",
         },
         {
-          "id": 2,
-          "range": "Friend",
-          "description": "Anyone on or off Facebook"
+          id: 2,
+          range: "Friend",
+          description: "Anyone on or off Facebook",
         },
         {
-          "id": 3,
-          "range": "Pecific",
-          "description": "Only show to some friends"
+          id: 3,
+          range: "Pecific",
+          description: "Only show to some friends",
         },
         {
-          "id": 4,
-          "range": "Only me",
-          "description": "Only you can see your post"
+          id: 4,
+          range: "Only me",
+          description: "Only you can see your post",
         },
         {
-          "id": 5,
-          "range": "Custom",
-          "description": "Include and exclude friends"
+          id: 5,
+          range: "Custom",
+          description: "Include and exclude friends",
         },
-      ]
+      ],
     };
   },
   methods: {
@@ -55,8 +60,8 @@ export default {
       this.rangeValue = range;
     },
   },
-  components: { Object }
-}
+  components: { Object },
+};
 </script>
 
 <style lang="css" scoped>

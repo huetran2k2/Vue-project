@@ -1,11 +1,11 @@
 <template>
-  <div class="comment-session">
+
     <div class="post-comment">
       <div class="list">
         <div class="comment-friend">
           <img v-bind:src="user.avatar" alt="" class="friend-comment-pic" />
           <div class="friend-comment-comment">
-            <a href="#" class="comment-author"
+            <a class="comment-author"
               >{{ user.lastName + " " }}{{ user.firstName }}
             </a>
             <span class="comment-content"> {{ comment.content }}</span>
@@ -21,25 +21,25 @@
               <font-awesome-icon icon="fa-solid fa-ellipsis" />
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Chỉnh sửa bình luận </a></li>
+              <li><a class="dropdown-item">Chỉnh sửa bình luận </a></li>
               <li>
                 <hr class="dropdown-divider" />
               </li>
               <li>
-                <a class="dropdown-item" href="#" @click="deleteComment(comment.id)"
+                <a class="dropdown-item" @click="deleteComment(comment.id)"
                   >Xóa</a
                 >
               </li>
               <li>
                 <hr class="dropdown-divider" />
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item">Something else here</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
 </template>
 
 <script>

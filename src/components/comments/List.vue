@@ -4,7 +4,6 @@
       <div class="box-pic">
         <img src="@/assets/images/profile-pic.png" alt="" class="profile-pic" />
       </div>
-      <h1>{{ id }}</h1>
       <div class="comment-text">
         <input
           @keyup.enter="addComment"
@@ -82,12 +81,6 @@ export default {
       }
       return false;
     },
-    // updateComments(id) {
-    //   console.log(id);
-    //     console.log("comment",this.newComments)
-    //     this.newComments = this.newComments.filter(comments => comments.id !== id)
-    //     this.$parent.$parent.$parent.$emit("update-comments", this.newComments);
-    // },
   },
 };
 </script>

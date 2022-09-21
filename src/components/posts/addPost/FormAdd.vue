@@ -118,7 +118,7 @@
             type="button"
             class="btn btn-primary"
             data-bs-dismiss="modal"
-            @click="addPost()"
+            @click="handlePost()"
           >
             Post
           </button>
@@ -148,21 +148,37 @@ export default {
       listPosts: [],
     };
   },
+  props: {
+    postEdit: {
+      type: Object,
+    },
+  },
   components: {
     Audience,
+  },
+  watch: {
+    postEdit(value, oldValue) {
+      console.log("post edit update", value);
+      this.form = value;
+    },
   },
   methods: {
     showAudience() {
       this.isShowAudiences = !this.isShowAudiences;
     },
     onFileChange(event) {
-      // this.form.image = URL.createObjectURL(event.target.files[0]);
-      // console.log(this.form.image);
       const reader = new FileReader();
       reader.readAsDataURL(event.target.files[0]);
       reader.onload = () => {
         this.form.image = reader.result;
       };
+    },
+    handlePost() {
+      if (this.form.id) {
+        this.updatePost(this.postEdit.id);
+      } else {
+        this.addPost();
+      }
     },
     async addPost() {
       let date = new Date();
@@ -174,6 +190,18 @@ export default {
         `http://localhost:3000/posts/${res.data.id}?_expand=user&_embed=comments&_embed=emotions&_embed=shares`
       );
       this.$emit("update-list-post", post.data);
+    },
+    async updatePost(id) {
+      console.log("update", id);
+      const res = await axios
+        .patch(`http://localhost:3000/posts/${id}`, this.form)
+        .then((response) => {
+          console.log("response updte", response);
+          this.$emit("update-post-edit");
+        })
+        .catch(function (error) {
+          console.log(error.response);
+        });
     },
   },
 };

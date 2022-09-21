@@ -1,4 +1,4 @@
-// import Post from './components/posts/Post.vue'
+
 import SignUp from './components/authentication/signup/index.vue'
 import LogIn from './components/authentication/login/index.vue'
 import Layout from './components/Layout.vue'
@@ -21,7 +21,7 @@ const routes = [
         name:"LogIn",
         component: LogIn
     },
-     {
+    {
         path:'/profile',
         name:"Index",
         component: Index
