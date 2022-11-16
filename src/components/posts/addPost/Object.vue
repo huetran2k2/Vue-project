@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="ul">
-        <input type="radio" name="objects" :value="ob.range" v-model="rangeValue" />
+        <input type="radio" name="objects" :value="ob.range"  />
       </div>
     </li>
   </ul>
@@ -25,11 +25,11 @@ export default {
       return this.rangeValue === this.ob.range ? "dark-theme" : "light-theme";
     },
   },
-  watch: {
-    rangeValue() {
-      this.$emit("update-range-value", this.rangeValue);
-    },
-  },
+  // watch: {
+  //   rangeValue() {
+  //     this.$emit("update-range-value", this.rangeValue);
+  //   },
+  // },
   props: {
     ob: {
       type: Object,
